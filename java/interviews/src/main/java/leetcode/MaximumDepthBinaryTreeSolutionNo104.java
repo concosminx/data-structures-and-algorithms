@@ -28,7 +28,7 @@ public class MaximumDepthBinaryTreeSolutionNo104 {
         if (root == null)
             return 0;
 
-        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        Deque<TreeNode> stack = new LinkedList<>();
 
         stack.push(root);
         int count = 0;
