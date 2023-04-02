@@ -34,8 +34,11 @@ jobs:
       with:
         gradle-version: 7.1
         arguments: test -p ./java/interviews
-    - name: Upload build reports
-      uses: actions/upload-artifact@v3
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/composite@v2
+      if: always()
       with:
-        name: build-reports
-        path: build/reports/
+        files: |
+          test-results/**/*.xml
+          test-results/**/*.trx
+          test-results/**/*.json
