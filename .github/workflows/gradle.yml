@@ -41,4 +41,5 @@ jobs:
       if: always()
       with:
         files: |
-          ./java/interviews/build/test-results/**/*.xml        
+          *.xml
+          !config.xml   
