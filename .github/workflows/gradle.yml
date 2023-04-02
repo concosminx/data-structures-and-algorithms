@@ -45,4 +45,4 @@ jobs:
       if: always()
       with:
         files: |
-          ./java/interviews/build/test-results/**/*.xml        
+          ./test-results/**/*.xml        
