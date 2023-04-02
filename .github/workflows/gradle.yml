@@ -36,8 +36,10 @@ jobs:
       with:
         gradle-version: 7.1
         arguments: test -p ./java/interviews
-    - name: Status
-      run: pwd
+    - name: Status 1
+      run: cd ./java/interviews/
+    - name: Status 2
+      run: pwd      
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: always()
