@@ -37,7 +37,7 @@ jobs:
         gradle-version: 7.1
         arguments: test -p ./java/interviews 
     - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v2
+      uses: EnricoMi/publish-unit-test-result-action@v2.0.0
       if: always()
       with:
         files: |
