@@ -35,14 +35,10 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         gradle-version: 7.1
-        arguments: test -p ./java/interviews
-    - name: Status 1
-      run: cd ./java/interviews/
-    - name: Status 2
-      run: pwd      
+        arguments: test -p ./java/interviews 
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: always()
       with:
         files: |
-          ./test-results/**/*.xml        
+          ./java/interviews/build/test-results/**/*.xml        
