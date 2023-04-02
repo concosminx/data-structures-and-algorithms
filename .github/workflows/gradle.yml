@@ -34,3 +34,8 @@ jobs:
       with:
         gradle-version: 7.1
         arguments: test -p ./java/interviews
+    - name: Upload build reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-reports
+        path: build/reports/
